@@ -18,7 +18,7 @@ public class EventService {
     @Autowired
     private CityRepository cityRepository;
 
-    @Transactional(readOnly = true)
+    @Transactional
     public EventDTO update(Long id, EventDTO dto){
         try{
             Event event = repository.getReferenceById(id);
